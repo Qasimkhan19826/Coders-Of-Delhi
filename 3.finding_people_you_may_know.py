@@ -41,8 +41,8 @@ data = load_data("massive_data.json")
 user_id =1
 recommendations = find_people_you_may_know(user_id,data)
 print(f" People You May Know For User {user_id}:{recommendations}")  
-with open("pages_might_like.json","w") as f:
-    f.write(recommendations)  
+with open("people_you_may_know.json","w") as f:
+    json.dump(recommendations,f)  
 
 
 

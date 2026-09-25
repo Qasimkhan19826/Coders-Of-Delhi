@@ -66,6 +66,8 @@ data = load_data('massive_data.json')
 user_id = 1
 page_recommendations = find_pages_you_might_like(user_id,data)
 print(f"Pages You Might Like For User {user_id}:{page_recommendations}")
+with open("pages_might_like.json","w") as f:
+    json.dump(page_recommendations,f)
 
 
 
